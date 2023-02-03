@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff
+}
+
+h1 {
+    font-size: 38px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px 80px 0 80px;
+    background-image: linear-gradient(-90deg,#000080,#00008B,#0000CD,#0000FF);
+}
+
+header div {
+    margin: auto;
+    margin-left: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 20px;
+    list-style: none;
+    font-size: 20px; 
+}
+
+a{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 570px;
+    padding: 30px 80px;
+    background-image: linear-gradient(-90deg,#000080,#00008B,#0000CD,#0000FF);
+
+}
+
+#inicio div {
+    width: 700px;
+    padding-right: 80px;
+    transform: 2ms ease-in;
+    position: relative;
+    transition: all 1.5s ease; 
+}
+
+#inicio div p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#inicio div button {
+    width: 150px;
+    height: 50px;
+    border-radius: 90px;
+    border: none;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    background: #C14649;
+    color: #fff;
+    cursor: pointer;
+}
+
+#inicio div button:hover {
+    background: rgb(219, 90, 92);
+
+}
+
+.list-itens:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+
+}
+
+#calcular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    color: #2A2850;
+    text-align: center;
+}
+
+#calcular div {
+    width: 350px;
+    color: #FFFFFF;
+    font-weight: bold;
+    border:solid 3mm  #000080;
+    border-radius: 50px;
+    padding: 40px;
+    height: 380px;
+    background-image: linear-gradient(#00008B,#0000CD,#0000FF, #000080);
+}
+
+.resultado{
+
+text-align: center;,
+align-items: center;
+padding: 0px;
+}
+
+
+#calcular span{
+    padding: 10px;
+
+}
+
+#calcular input{
+    width: 100%;
+    padding: 1px 2px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 15px;
+}
+
+.botao{
+    background:#C14649 ;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.input{
+
+    font-weight: bold;
+    width: 200px;
+    height: 25px;
+}
+
+#cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 650px;
+    background-image: linear-gradient(-90deg,#000080,#00008B,#0000CD,#0000FF);
+    padding: 0 30px;
+}
+
+#cadastrar div {
+    text-align: center;
+}
+
+#cadastrar div h1 {
+    margin-bottom: 40px;
+}
+
+#cadastrar form {
+    width: 350px;
+    color: #000080;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+#cadastrar form input {
+    width: 270px;
+    margin: 10px 0;
+    padding: 9px;
+    background: #fff;
+    border: solid 1px #000080;
+    font-size: 14px;
+}
+
+#cadastrar form button {
+    background: #000080;
+    width: 270px;
+    height: 55px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#cadastrar form button:hover {
+    background: rgb(62, 59, 114); 
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: #fff;
+    color: #2A2850;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+    #inicio img {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 40px 40px 0 40px;
+    }
+    
+    nav ul li {
+        padding: 0 10px;
+        list-style: none;
+        font-size: 18px; 
+    }
+    
+    #inicio {
+        padding: 10px 40px;
+    }
+
+    #inicio div {
+        padding-right: 0px;
+    }
+    
+    #inicio img {
+        display: none;
+    }
+    
+    #calcular {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        padding: 40px 0;
+    }
+    
+    #cadastrar div {
+        display: none;
+    }
+}
+
+.end a {
+
+    color: #000080;
+
+}

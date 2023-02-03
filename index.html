@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Easy Math - Juros Compostos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2 id="topo">EasyMath</h2>
+        </div>
+        <nav>
+            <ul>
+                <a href="#inicio">
+                    <li class="list-itens">Início</li>
+                </a>
+                <a href="#calcular">
+                    <li class="list-itens">Calcular</li>
+                </a>
+                <a href="#cadastrar">
+                    <li class="list-itens">Cadastrar</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <div>
+            <h1>
+                Juros Compostos
+            </h1>
+            <br>
+            <p>
+                Essa página tem o intuito de deixar o seu cálculo de juros compostos mais rápido e prático através de uma ferramenta em javascript.
+            </p>
+            <button><a href="#calcular">Saiba mais</a></button>
+        </div>
+    </section>
+    <section id="calcular">
+         
+        <div id="calculator">
+
+              
+                <label for="value">Valor Inicial (capital):</label>
+                <input type="number" id="value" class="input" onfocus="this.value=''" placeholder="Digite um valor:"><br>
+                
+                
+                <label for="fee">Taxa de Juros (a.m):</label>
+                <input type="number" id="fee" class="input" onfocus="this.value=''" placeholder="Digite um valor:"><br>
+               
+
+                <label for="time">Tempo de Rendimento (a.m):</label>
+                <input type="number" id="time" class="input" onfocus="this.value=''" placeholder="Digite um valor:"><br>
+                <br>
+                
+                <span class="resultado">Montante:</span><span id="total" class="resultado">R$ 0,00</span><br><br>
+                <span class="resultado">Juros:</span><span id="juros" class="resultado">R$ 0,00</span><br><br>
+                <label><button id="calculate" class="botao">
+                        CALCULAR
+                </button></label>
+             
+        </div>
+    </section>
+     <section id="cadastrar">
+        <div>
+            <h1>Venha fazer parte do nosso time!</h1>
+            <h2>Para garantir mais ferramentas como essa</h2>
+            <h2>se cadastre em nosso site</h2>
+        </div>
+        <form action="backend.html" method="post" enctype="multipart/form-data">
+            
+            <label for="">Nome</label>
+            <input type="text" name="Nome" id="nome" placeholder="Seu nome completo" required >
+            
+            <label for="">Usuário</label>
+            <input type="text" name="Usuario" id="usuario" placeholder="Username" required>
+            
+            <label for="">E-mail</label>
+            <input type="email" name="Email" id="email" placeholder="Seu endereço de e-mail" required>
+            
+            <label for="">Senha</label>
+            <input type="password" name="Senha" id="senha" placeholder="Digite uma senha" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+     <footer>
+        <p class="end"><a href="#topo">EasyMath</a></p>
+    </footer>
+</body>
+<script>
+    
+    document.getElementById('calculate').addEventListener('click', function(){
+    
+    const value = document.getElementById('value').value;
+    const fee = (document.getElementById('fee').value) / 100;
+    const time = document.getElementById('time').value;
+
+    const total = value * (1 + fee)**time;
+
+    const juros = total - value
+
+    document.getElementById('total').innerHTML = ("R$ " + total.toFixed(2).replace('.', ','));
+    document.getElementById('juros').innerHTML = ("R$ " + juros.toFixed(2).replace('.', ','));
+
+       
+});
+</script>
+</html>
