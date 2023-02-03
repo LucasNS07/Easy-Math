@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyMath - Equação Quadrática</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h2 id="topo">EasyMath</h2>
+        </div>
+        <nav>
+            <ul>
+                <a href="#inicio">
+                    <li class="list-itens">Início</li>
+                </a>
+                <a href="#calcular">
+                    <li class="list-itens">Calcular</li>
+                </a>
+                <a href="#cadastrar">
+                    <li class="list-itens">Cadastrar</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <div>
+            <h1>
+               Equação Quadrática 
+            </h1>
+            <br>
+            <p>
+                Essa página tem o intuito de deixar o seu estudo sobre equação quadrática mais rápido e prático através de uma ferramenta em javascript, que calcula as raízes da equação do 2º grau de forma eficaz.
+            </p>
+            <button><a href="#calcular">Saiba mais</a></button>
+        </div>
+    </section>
+    <section id="calcular">
+        <div>
+            <label>Coeficiente a: <input id="a" class="input" type="number" placeholder="Digite um valor:" onchange="disabledButton()"></label>
+            <label>Coeficiente b: <input id="b" class="input" type="number" placeholder="Digite um valor:"></label>
+            <label>Coeficiente c: <input id="c" class="input" type="number" placeholder="Digite um valor:"></label><br><br>
+            <button id="botao" class="button" onclick="calcular()" disabled="disabled">CALCULAR</button><br><br>
+            
+            Raiz 1: <input id="x1" class="output" type="text" readonly>
+            Raiz 2: <input id="x2" class="output" type="text" readonly>
+            Observação: <input id="obs" class="output" type="text" readonly>
+         </div>
+    </section>
+     <section id="cadastrar">
+        <div>
+            <h1>Venha fazer parte do nosso time!</h1>
+            <h2>Para garantir mais ferramentas como essa</h2>
+            <h2>se cadastre em nosso site</h2>
+        </div>
+        <form action="backend.html" method="post" enctype="multipart/form-data">
+            
+            <label for="">Nome</label>
+            <input type="text" name="Nome" id="nome" placeholder="Seu nome completo" required >
+            
+            <label for="">Usuário</label>
+            <input type="text" name="Usuario" id="usuario" placeholder="Username" required>
+            
+            <label for="">E-mail</label>
+            <input type="email" name="Email" id="email" placeholder="Seu endereço de e-mail" required>
+            
+            <label for="">Senha</label>
+            <input type="password" name="Senha" id="senha" placeholder="Digite uma senha" required>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+     <footer>
+        <p class="end"><a href="#topo">EasyMath</a></p>
+    </footer>
+</body>
+</html>
